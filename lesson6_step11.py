@@ -6,13 +6,13 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    input1 = browser.find_elements_by_xpath('//input[@required]')
-    input1[0].send_keys("Yefim")
-    input1[1].send_keys("Mironyuk")
-    input1[2].send_keys("yefimmironyuk@gmail.com")
+    name = browser.find_element_by_xpath('//input[@placeholder="Input your first name"]')
+    name.send_keys("Yefim")
+    last_name = browser.find_element_by_xpath('//input[@placeholder="Input your last name"]')
+    last_name.send_keys("Mironyuk")
+    email = browser.find_element_by_xpath('//input[@placeholder="Input your email"]')
+    email.send_keys("yefimmironyk@gmail.com")
 
-    # проверим, что полей по прежнему 3
-    assert len(input1) == 3
 
     button = browser.find_element_by_css_selector("button.btn")
     button.click()
