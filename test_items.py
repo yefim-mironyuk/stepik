@@ -7,3 +7,4 @@ def test_items(browser):
         time.sleep(10)
         assert button is not None
 
+
