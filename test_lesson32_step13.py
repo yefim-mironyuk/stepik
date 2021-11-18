@@ -39,9 +39,9 @@ class Testing(unittest.TestCase):
         welcome_text = welcome_text_elt.text
         self.assertEqual("Congratulations! You have successfully registered!", welcome_text)
 
-
     def tearDown(self):
         self.browser.close()
+
 
 if __name__ == "__main__":
     unittest.main()
