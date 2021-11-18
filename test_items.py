@@ -4,7 +4,7 @@ def test_items(browser):
         browser.get(link)
         browser.implicitly_wait(10)
         button = browser.find_elements_by_class_name("btn.btn-lg.btn-primary.btn-add-to-basket")
-        time.sleep(10)
+        time.sleep(5)
         assert button is not None
 
 
